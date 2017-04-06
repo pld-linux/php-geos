@@ -7,7 +7,8 @@ Summary:	PHP extension for interfacing with the GEOS library
 Summary(pl.UTF-8):	Rozszerzenie PHP do współpracy z biblioteką GEOS
 Name:		%{php_name}-geos
 Version:	1.0.0
-Release:	1
+Release:	2
+Epoch:		1
 License:	LGPL v2.1 (GEOS code), MIT (PHP interfaces)
 Group:		Development/Languages/PHP
 # http://git.osgeo.org/gogs/geos/php-geos
@@ -16,6 +17,7 @@ Source0:	https://git.osgeo.org/gogs/geos/php-geos/archive/%{version}.tar.gz?/php
 URL:		http://geos.osgeo.org/
 %{?with_tests:BuildRequires:    %{php_name}-cli >= 5}
 BuildRequires:	%{php_name}-devel >= 5
+%{?with_tests:BuildRequires:	%{php_name}-pcre >= 5}
 BuildRequires:	geos-devel >= 3.5
 BuildRequires:	rpmbuild(macros) >= 1.666
 %{?requires_php_extension}
